@@ -32,7 +32,7 @@ const config = {
     enabled: true,
     speeds: {
       desktop: { horizontal: 230, vertical: 50 },
-      mobile: { horizontal: 180, vertical: 50 },
+      mobile: { horizontal: 100, vertical: 50 },
     },
     moveInViewport: true,
     startDelay: 1000,
@@ -334,24 +334,24 @@ document.addEventListener("DOMContentLoaded", function () {
       if (mainAnimation) mainAnimation.pause();
       if (snowAnimation) snowAnimation.pause();
 
-      restartTimeoutId = setTimeout(() => {
-        movementStarted = false;
-        snowTrailsShown = false;
-        snowTrailsVisible = false;
-        lastTimestamp = null;
-        isFlipping = false;
-        restoreInitialPosition();
-        verticalDirection = "down";
-        mainContainer.style.transition = "opacity 0.8s ease-in";
-        mainContainer.style.opacity = "1";
-        if (mainAnimation) mainAnimation.goToAndPlay(0);
-        if (snowAnimation) snowAnimation.goToAndPlay(0);
+      // restartTimeoutId = setTimeout(() => {
+      //   movementStarted = false;
+      //   snowTrailsShown = false;
+      //   snowTrailsVisible = false;
+      //   lastTimestamp = null;
+      //   isFlipping = false;
+      //   restoreInitialPosition();
+      //   verticalDirection = "down";
+      //   mainContainer.style.transition = "opacity 0.8s ease-in";
+      //   mainContainer.style.opacity = "1";
+      //   if (mainAnimation) mainAnimation.goToAndPlay(0);
+      //   if (snowAnimation) snowAnimation.goToAndPlay(0);
 
-        setTimeout(() => {
-          isRestarting = false;
-          animationId = requestAnimationFrame(animate);
-        }, initialMovementDelay);
-      }, config.movement.restartDelay);
+      //   setTimeout(() => {
+      //     isRestarting = false;
+      //     animationId = requestAnimationFrame(animate);
+      //   }, initialMovementDelay);
+      // }, config.movement.restartDelay);
     }
 
     /**
