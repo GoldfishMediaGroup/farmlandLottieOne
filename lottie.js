@@ -4,7 +4,8 @@
 const config = {
   wrapperSelector: ".wrapper",
   animationPath:
-    "https://storage.yandexcloud.net/external-assets/tantum/animations/lottie/jump.json",
+    // "https://storage.yandexcloud.net/external-assets/tantum/animations/lottie/jump.json",
+    "sani.json",
 
   animationSize: {
     desktop: { width: 456, height: 344 },
